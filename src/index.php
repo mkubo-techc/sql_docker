@@ -7,7 +7,7 @@
 require_once 'header.php';
 
 // Get all products from the database
-$sql = "SELECT * FROM products ORDER BY id DESC";
+$sql = "";
 $products = executeQuery($sql)->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
