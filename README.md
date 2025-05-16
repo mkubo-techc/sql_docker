@@ -27,6 +27,10 @@ git clone https://github.com/mkubo-techc/sql_docker.git
 ```
 
 ```
+cd sql_docker
+```
+
+```
 docker-compose up -d
 ```
 
@@ -36,7 +40,18 @@ http://localhost/index.php
 ### PHPmyadminがみれるか確認
 http://localhost:3001
 
-### データベース設計
+
+## ローカルにソースがある場合
+```
+cd 【ソースのrootディレクトリ】
+```
+
+```
+docker-compose up -d
+```
+
+
+## データベース設計
 
 このプロジェクトでは以下のテーブルを使用しています：
 
@@ -45,7 +60,7 @@ http://localhost:3001
 - `carts`: ユーザーのカート情報を管理
 - `sessions`: セッション情報を管理（オプション）
 
-### SQL操作
+## SQL操作
 
 このプロジェクトでは以下のSQL操作を学ぶことができます：
 
@@ -55,11 +70,11 @@ http://localhost:3001
 - DELETE: カートからの商品削除など
 - JOIN: カート表示時の商品情報の結合など
 
-### セッション管理
+## セッション管理
 
 ユーザーのログイン状態を管理するためのセッション処理を実装しています。
 
-### セキュリティ対策
+## セキュリティ対策
 
 - パスワードハッシュ化
 - SQLインジェクション対策（プリペアドステートメント）
