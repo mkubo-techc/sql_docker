@@ -64,3 +64,24 @@ INSERT INTO products (name, price, description) VALUES
 ('ノートPC', 80000, '学習用ノートパソコン'),
 ('USBメモリ', 1500, '16GB USBメモリ'),
 ('プログラミング演習キット', 5000, 'PHP+MySQLの実践的な演習キット');
+
+-- 注文テーブル
+CREATE TABLE IF NOT EXISTS orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    status VARCHAR(50) DEFAULT 'pending', -- pending, completed, canceled など
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- 注文明細テーブル（注文に含まれる各商品）
+CREATE TABLE IF NOT EXISTS order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL DEFAULT 1,
+    price DECIMAL(10,2) NOT NULL, -- 商品の注文時点の価格
+    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
