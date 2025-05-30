@@ -74,6 +74,8 @@ reviewsテーブルのCREATE TABLE文を記述
 
 【解答】
 
+※`docker\mysql\sql\insert_review.sql`でreviewsテーブルにデータを入れることが可能です
+
 ## 9. 外部キー制約を理解しよう（JOIN設計）
 上記で作成した「reviews」テーブルと「users」「products」テーブルをJOINして、レビュー情報（ユーザー名、商品名、スコア）を一覧表示せよ。
 
