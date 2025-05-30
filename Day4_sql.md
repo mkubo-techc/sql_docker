@@ -65,8 +65,8 @@ SQL課題一覧（このファイルに追記する形で対応）
 新たに「reviews（レビュー）」テーブルを追加しよう。以下の仕様でinit.sqlに追加するSQLを記述せよ。
 
 - review_id（PK）
-- user_id（FK）
-- product_id（FK）
+- user_id（INTAGER）
+- product_id（INTAGER）
 - comment（TEXT）
 - score（整数、1〜5）
 
