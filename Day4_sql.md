@@ -1,5 +1,12 @@
 SQL課題一覧（このファイルに追記する形で対応）
 
+以下のSQLを流したうえで回答してみてください
+`docker\mysql\init.sql`の68-87行目
+`docker\mysql\sql\insert_orders.sql`
+`docker\mysql\sql\insert_order_items.sql`
+`docker\mysql\sql\insert_users.sql`
+
+
 ## 1. 条件に合致するレコードを抽出しよう（WHERE）
 「products」テーブルから価格が500円以上の商品の一覧を取得せよ。
 - 500円以上の商品一覧を抽出
