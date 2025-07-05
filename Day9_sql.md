@@ -1,5 +1,9 @@
 SQL課題一覧（このファイルに追記する形で対応）
 
+Day4のデータをそのまま使ってください。
+
+### ※再構築する際は以下の手順を実施してください。<br>
+再構築手順：<br>
 以下のSQLを流したうえで回答してみてください<br>
 `docker\mysql\init.sql`の68-87行目 <br>
 `docker\mysql\sql\insert_orders.sql`<br>
